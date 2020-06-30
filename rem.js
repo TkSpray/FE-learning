@@ -1,25 +1,3 @@
-function fn() {
-  var max = 10
-  return function bar(x) {
-    if (x > max) {
-      console.log(x)
-    }
-  }
-}
-var f1 = fn()
-f1(15)
-
-var max = 10,
-  fn = function (x) {
-    if (x > max) {
-      console.log(x) //15
-    }
-  }
-;(function (f) {
-  var max = 100
-  f(15)
-})(fn)
-
 function dpr() {
   var desW = 640,
     winW = document.documentElement.clientWidth,
