@@ -5,7 +5,7 @@ Function.prototype.myApply = function (context = window, args = []) {
 
   context.fn = this;
 
-  const res = args.length ? context.fn(...args) : context.fn();
+  const res = context.fn(...args);
   delete context.fn;
 
   return res;
