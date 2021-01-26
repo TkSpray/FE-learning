@@ -1,12 +1,19 @@
 Function.prototype.myCall = function (context = window, ...args) {
-  if (typeof this !== "object") {
-    throw new TypeError("Error");
-  }
+    if (typeof this !== 'object') {
+        throw new TypeError('Error')
+    }
 
-  context.fn = this;
+    context.fn = this
 
-  const res = context.fn(...args);
-  delete context.fn;
+    const res = context.fn(...args)
+    delete context.fn
 
-  return res;
-};
+    return res
+}
+
+const myCall = (context = window, ...args) => {
+    context.fn = this
+    const res = context.fn(...args)
+    delete context.fn
+    return res
+}
